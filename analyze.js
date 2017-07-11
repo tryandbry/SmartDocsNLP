@@ -22,7 +22,7 @@ module.exports = require('express').Router()
 .post('/entity', (req, res, next) => {
   // console.log('hit the entity route')
   // console.log('here is the req.body', req.body)
-  console.log("whats this", secrets.rosetteApi)
+  console.log('/api/analyze/entity/ hit!, text:',req.body.text);
   var instance = axios.create({
       headers: {
         'X-RosetteAPI-Key': secrets.rosetteApi,

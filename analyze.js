@@ -9,7 +9,7 @@
  * HEROKU_URL = heroku domain name
  */
 
-const secrets = process.env.ROSETTE;
+const rosette = process.env.ROSETTE;
 const origin = 'https://' + process.env.HEROKU_APP_NAME + '.herokuapp.com/';
 const axios = require('axios')
 
@@ -25,7 +25,7 @@ module.exports = require('express').Router()
   console.log('/api/analyze/entity/ hit!, text:',req.body.text);
   var instance = axios.create({
       headers: {
-        'X-RosetteAPI-Key': secrets.rosetteApi,
+        'X-RosetteAPI-Key': rosette,
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Cache-Control': 'no-cache',
@@ -54,7 +54,7 @@ module.exports = require('express').Router()
     // console.log("whats this", secrets.rosetteApi)
   var instance = axios.create({
       headers: {
-        'X-RosetteAPI-Key': secrets.rosetteApi,
+        'X-RosetteAPI-Key': rosette,
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Cache-Control': 'no-cache',
@@ -79,7 +79,7 @@ module.exports = require('express').Router()
   // console.log("whats this", secrets.rosetteApi)
   var instance = axios.create({
       headers: {
-        'X-RosetteAPI-Key': secrets.rosetteApi,
+        'X-RosetteAPI-Key': rosette,
         'Content-Type': 'application/json',
         'Accept': 'application/json',
         'Cache-Control': 'no-cache',

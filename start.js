@@ -8,7 +8,7 @@ const finalHandler = require('finalhandler')
 const morgan = require('morgan');
 
 const app = express()
-
+const PORT = process.env.PORT || 5000;
 
 module.exports = app
 
@@ -52,5 +52,5 @@ module.exports = app
   })
 
   // start that shit up
-  .listen(3000, console.log('listening on 3000!'))
+  .listen(PORT, console.log('listening on port ',PORT,"!"))
 
